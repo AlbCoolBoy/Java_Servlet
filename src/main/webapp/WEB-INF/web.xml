@@ -17,8 +17,59 @@
     <servlet>
         <servlet-name>Bservlet</servlet-name>
         <servlet-class>com.example.Java_Servlet.Bservlet</servlet-class>
-
     </servlet>
+    <servlet>
+        <servlet-name>ServletConfig</servlet-name>
+        <servlet-class>com.example.Java_Servlet01.ConfigTestServlet</servlet-class>
+        <!--这里是可以初始化Servlet对象的信息的-->
+        <!--这里的配置信息都会被Tomcat解析-->
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:mysql://localhost:3306/sql_store</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>root</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>smt020528</param-value>
+        </init-param>
+    </servlet>
+
+
+
+
+    <servlet>
+        <servlet-name>Context</servlet-name>
+        <servlet-class>com.example.Java_Servlet01.ServletContextTest01</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Context02</servlet-name>
+        <servlet-class>com.example.Java_Servlet01.ServletContextTest02</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Path</servlet-name>
+        <servlet-class>com.example.Java_Servlet01.ServletContextTest04</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddDataToContext</servlet-name>
+        <servlet-class>com.example.Java_Servlet01.ServlertContextTest05</servlet-class>
+    </servlet>
+
+
+    <!--这里也可以配置servletContext初始化参数-->
+    <!--上下文得到初始化参数,以下的配置细腻些能够在servlet中通过ServletContext进行获取-->
+    <context-param>
+        <param-name>pageSize</param-name>
+        <param-value>10</param-value>
+    </context-param>
+    <context-param>
+        <param-name>startIndex</param-name>
+        <param-value>0</param-value>
+    </context-param>
+
+
 
     <servlet-mapping>
         <servlet-name>CustomersServlet</servlet-name>
@@ -33,6 +84,28 @@
         <url-pattern>/servlet/B</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>ServletConfig</servlet-name>
+        <url-pattern>/servlet/ServletConfig</url-pattern>
+    </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>Context</servlet-name>
+        <url-pattern>/Context</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Context02</servlet-name>
+        <url-pattern>/Context02</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Path</servlet-name>
+        <url-pattern>/path</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddDataToContext</servlet-name>
+        <url-pattern>/Data</url-pattern>
+    </servlet-mapping>
+   
 
 </web-app>

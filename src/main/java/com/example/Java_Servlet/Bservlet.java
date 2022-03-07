@@ -4,9 +4,7 @@ import javax.servlet.*;
 import java.io.IOException;
 
 public class Bservlet implements Servlet {
-    public Bservlet(){
-        System.out.println("Bservlet 无参构造执行了");
-    }
+
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
 

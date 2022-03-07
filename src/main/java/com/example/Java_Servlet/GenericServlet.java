@@ -3,21 +3,29 @@ package com.example.Java_Servlet;
 import javax.servlet.*;
 import java.io.IOException;
 
-public class GenericServlet implements Servlet {
+public abstract class GenericServlet implements Servlet {
+    private ServletConfig config;
+
     @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
+    public final void init(ServletConfig servletConfig) throws ServletException {
+        this.config=servletConfig;
+        this.init();
 
     }
+    public void init(){
+
+    }
+    //这样子类依然能够重写init()方法并且不会修改原来的代码
 
     @Override
     public ServletConfig getServletConfig() {
-        return null;
+        return config;
     }
 
     @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
+    public abstract void service(ServletRequest servletRequest, ServletResponse servletResponse)
+            throws ServletException, IOException;
 
-    }
 
     @Override
     public String getServletInfo() {
