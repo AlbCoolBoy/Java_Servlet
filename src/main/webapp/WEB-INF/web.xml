@@ -56,6 +56,14 @@
         <servlet-name>AddDataToContext</servlet-name>
         <servlet-class>com.example.Java_Servlet01.ServlertContextTest05</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetServlet</servlet-name>
+        <servlet-class>com.example.HTTP_Servlet.GetServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostServlet</servlet-name>
+        <servlet-class>com.example.HTTP_Servlet.PostServlet</servlet-class>
+    </servlet>
 
 
     <!--这里也可以配置servletContext初始化参数-->
@@ -105,6 +113,14 @@
     <servlet-mapping>
         <servlet-name>AddDataToContext</servlet-name>
         <url-pattern>/Data</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetServlet</servlet-name>
+        <url-pattern>/Get</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostServlet</servlet-name>
+        <url-pattern>/Post</url-pattern>
     </servlet-mapping>
    
 
