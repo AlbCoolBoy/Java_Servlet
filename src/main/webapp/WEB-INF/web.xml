@@ -70,6 +70,10 @@
         <servlet-class>com.example.HTTP_Servlet.LoginServlet.LoginServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>Request</servlet-name>
+        <servlet-class>com.example.HTTP_Servlet.HttpServletRequest.ResquestTest</servlet-class>
+    </servlet>
 
 
 
@@ -87,6 +91,10 @@
         <param-name>startIndex</param-name>
         <param-value>0</param-value>
     </context-param>
+
+    <welcome-file-list>
+        <welcome-file>LoginServlet.html</welcome-file>
+    </welcome-file-list>
 
 
 
@@ -139,5 +147,9 @@
        <servlet-name>Login</servlet-name>
        <url-pattern>/UserLogin</url-pattern>
    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Request</servlet-name>
+        <url-pattern>/Request</url-pattern>
+    </servlet-mapping>
 
 </web-app>
