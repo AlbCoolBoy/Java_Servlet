@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../HttpServlet/HttpServlet.iml" filepath="$PROJECT_DIR$/../HttpServlet/HttpServlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Servlet.iml" filepath="$PROJECT_DIR$/Java_Servlet.iml" />
     </modules>
   </component>
